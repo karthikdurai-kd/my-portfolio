@@ -21,10 +21,10 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
-    category: "Full Stack Web App",
+    category: "Work Management App",
     title: "Work Management Application",
     description:
-      "An advanced MERN stack application designed to enhance work management through seamless project initiation, task distribution, and real-time updates. This application is tailored to improve project tracking and team collaboration, offering automated role-based access control and real-time notifications.",
+      "An advanced MERN stack app for efficient project management, enabling seamless task distribution, real-time updates, role-based access control to enhance team collaboration and project tracking.",
     stack: [
       { name: "ReactJS" },
       { name: "AntD" },
@@ -35,15 +35,14 @@ const projects = [
       { name: "Socket.io" },
     ],
     image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+    github: "https://github.com/karthikdurai-kd/Work-Management-Application",
   },
   {
     num: "02",
-    category: "Full Stack Web App",
+    category: "Vote Stream App",
     title: "Vote Stream App",
     description:
-      "Vote Stream App is a real-time voting application where users can join rooms based on topics, share comments, and see them displayed as a WordCloud format instantly. The app is built with Next.js for the frontend, Tailwind CSS for styling, Express.js for the backend, Redis for data storage, and Socket.io for real-time updates.",
+      "Real-time voting application where users can join rooms based on topics, share comments, and see them displayed as a WordCloud format instantly. The app is built with Next.js for the frontend, Tailwind CSS for styling, Express.js for the backend, Redis for data storage, and Socket.io for real-time updates.",
     stack: [
       { name: "Next.js" },
       { name: "TailwindCSS" },
@@ -53,15 +52,14 @@ const projects = [
       { name: "Socket.io" },
     ],
     image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+    github: "https://github.com/karthikdurai-kd/Vote-Stream-App",
   },
   {
     num: "03",
-    category: "Serverless Cloud Application",
+    category: "Travel Tales App",
     title: "Travel Tales App",
     description:
-      "Travel Tales App is a serverless web application designed to provide users with an interactive platform to share and explore travel experiences. The frontend is built with React and TypeScript, while the backend is developed with AWS services to create a robust, scalable, and efficient infrastructure.",
+      "Serverless cloud application for sharing and exploring travel experiences, with a frontend built in React and TypeScript and a backend powered by AWS services for scalability and efficiency.",
     stack: [
       { name: "ReactJS" },
       { name: "TypeScript" },
@@ -72,12 +70,9 @@ const projects = [
       { name: "AWS S3" },
       { name: "AWS Cognito" },
       { name: "AWS CDK" },
-      { name: "CloudFormation" },
-      { name: "AWA KMS" },
     ],
     image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+    github: "https://github.com/karthikdurai-kd/Travel-Tales-App",
   },
 ];
 
@@ -92,9 +87,9 @@ const Projects = () => {
     setProject(projects[currentIndex]);
   };
   return (
-    <motion.section className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
+    <motion.section className="min-h-[80vh] flex flex-col justify-center pb-12 xl:px-0">
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap[30px]">
+        <div className="flex flex-col xl:flex-row xl:gap-[40px]">
           {/* Project Description Content Area */}
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
@@ -128,18 +123,7 @@ const Projects = () => {
               {/* project links */}
               <div className="flex items-center gap-4">
                 {/* project live button */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+
                 {/* project github button */}
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
@@ -184,7 +168,10 @@ const Projects = () => {
                 );
               })}
               {/* Slider Buttons */}
-              <WorkSliderButtons />
+              <WorkSliderButtons
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+              />
             </Swiper>
           </div>
         </div>
