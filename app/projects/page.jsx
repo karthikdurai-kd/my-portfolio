@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-// Imporing components
+// Importing components
 import WorkSliderButtons from "@/components/WorkSliderButtons";
 
 // Projects Data
@@ -22,7 +22,7 @@ const projects = [
   {
     num: "01",
     category: "Work Management App",
-    title: "Work Management Application",
+    title: "Full Stack Web Application",
     description:
       "An advanced MERN stack app for efficient project management, enabling seamless task distribution, real-time updates, role-based access control to enhance team collaboration and project tracking.",
     stack: [
@@ -40,7 +40,7 @@ const projects = [
   {
     num: "02",
     category: "Vote Stream App",
-    title: "Vote Stream App",
+    title: "Real Time Voting Application",
     description:
       "Real-time voting application where users can join rooms based on topics, share comments, and see them displayed as a WordCloud format instantly. The app is built with Next.js for the frontend, Tailwind CSS for styling, Express.js for the backend, Redis for data storage, and Socket.io for real-time updates.",
     stack: [
@@ -57,7 +57,7 @@ const projects = [
   {
     num: "03",
     category: "Travel Tales App",
-    title: "Travel Tales App",
+    title: "Serverless Cloud Application",
     description:
       "Serverless cloud application for sharing and exploring travel experiences, with a frontend built in React and TypeScript and a backend powered by AWS services for scalability and efficiency.",
     stack: [
@@ -86,12 +86,13 @@ const Projects = () => {
     // update project state based on the current slide index
     setProject(projects[currentIndex]);
   };
+
   return (
     <motion.section className="min-h-[80vh] flex flex-col justify-center pb-12 xl:px-0">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[40px]">
           {/* Project Description Content Area */}
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none mb-8 xl:mb-0">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* project number */}
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
@@ -122,8 +123,6 @@ const Projects = () => {
               <div className="border border-white/20"></div>
               {/* project links */}
               <div className="flex items-center gap-4">
-                {/* project live button */}
-
                 {/* project github button */}
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
@@ -151,17 +150,24 @@ const Projects = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-gray-800/20 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-[1.02] hover:shadow-xl">
                       {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10 transition-opacity duration-300 opacity-0 group-hover:opacity-100"></div>
                       {/* project image */}
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-cover rounded-2xl"
                           alt="project-image"
                         />
+                      </div>
+                      {/* card content on hover */}
+                      <div className="absolute bottom-4 left-4 right-4 z-20 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 className="text-lg font-bold">
+                          {project.category}
+                        </h3>
+                        <p className="text-sm text-white/80">{project.title}</p>
                       </div>
                     </div>
                   </SwiperSlide>
