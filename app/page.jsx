@@ -20,19 +20,20 @@ const Home = () => {
               Technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
+              {/* Download CV Button not needed for now */}
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
-              </Button>
+              </Button> */}
               <div className="mb-8 xl:mb-0">
                 {/* Adding Social Links icom component */}
                 <Social
                   containerStyles="flex gap-4"
-                  iconStyles="w-12 h-12 border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500 "
+                  iconStyles="w-16 h-16 border-2 border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:border-accent hover:transition-all duration-500"
                 />
               </div>
             </div>
