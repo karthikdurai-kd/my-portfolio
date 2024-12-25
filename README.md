@@ -1,11 +1,11 @@
 # Karthik Durai's Portfolio Website
 
-Welcome to the repository for my personal portfolio website.
+Welcome to my personal portfolio website github repository!!!
 
 ## Features
 
 - 🌐 **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
-- 💼 **Professional Overview**: Highlights my services, resume, and contact information.
+- 💼 **Professional Overview**: Highlights my services, projects, and contact information.
 - ✉️ **Contact Form**: Allows visitors to reach out directly.
 - 📈 **SEO Optimized**: Improved search engine visibility.
 
