@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import {
   SiReact,
   SiDocker,
@@ -127,6 +129,26 @@ const skills = {
 };
 
 const Resume = () => {
+  //  Tooltip delay logic
+  const [delayDurationCustom, setDelayDuration] = useState(100);
+
+  useEffect(() => {
+    const updateDelay = () => {
+      setDelayDuration(window.innerWidth <= 768 ? 200 : 100); // breakpoint check for mobile screens
+    };
+
+    // Initial call to set the delay based on current screen size
+    updateDelay();
+
+    // Add resize event listener to update the delay dynamically
+    window.addEventListener("resize", updateDelay);
+
+    return () => {
+      // Cleanup event listener on component unmount
+      window.removeEventListener("resize", updateDelay);
+    };
+  }, []);
+
   return (
     <div className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
       <div className="container mx-auto">
@@ -210,7 +232,7 @@ const Resume = () => {
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
-                        <TooltipProvider dealayDuration={100}>
+                        <TooltipProvider dealayDuration={delayDurationCustom}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] roundex-xl flex justify-center items-center group">
                               <div className="text-6xl group-hover:text-accent transition-all duration-300">
