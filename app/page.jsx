@@ -38,7 +38,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-0 xl:ml-[45px]">
+          <div className="order-1 xl:order-none mb-8 xl:mb-0 xl:ml-[45px] flex-grow flex items-center justify-center">
             {/* Photo Component */}
             <Photo />
           </div>

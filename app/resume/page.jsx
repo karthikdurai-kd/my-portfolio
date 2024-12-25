@@ -15,11 +15,10 @@ import {
   SiExpress,
   SiFigma,
   SiTailwindcss,
-  SiJenkins,
   SiFirebase,
+  SiNextdotjs,
 } from "react-icons/si";
 import { FaNodeJs, FaJava, FaAws, FaCloud } from "react-icons/fa";
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
@@ -35,7 +34,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const about = {
   title: "About me",
   description:
-    "I hold a Master’s degree in Software Engineering with a strong foundation in developing scalable web applications. Proficient in modern frameworks and cloud platforms like AWS and Azure, I focus on creating user-friendly, high-performance solutions. Passionate about solving complex problems and continuously expanding my technical expertise.",
+    "I hold a Master’s degree in Software Engineering from Concordia University, with a strong foundation in developing scalable web applications. Proficient in modern frameworks and cloud platforms like AWS and Azure, I focus on creating user-friendly, high-performance solutions. Passionate about solving complex problems and continuously expanding my technical expertise.",
   info: [
     {
       fieldName: "Name",
@@ -103,26 +102,26 @@ const skills = {
   title: "My Skills",
   description: "",
   skillList: [
-    { icon: <SiReact />, name: "ReactJS" },
-    { icon: <SiDocker />, name: "Docker" },
-    { icon: <FaNodeJs />, name: "NodeJS" },
+    { icon: <FaJava />, name: "Java" },
+    { icon: <SiHtml5 />, name: "HTML" },
+    { icon: <SiCss3 />, name: "CSS" },
+    { icon: <SiTailwindcss />, name: "TailwindCSS" },
     { icon: <SiJavascript />, name: "JavaScript" },
     { icon: <SiTypescript />, name: "TypeScript" },
-    { icon: <SiCss3 />, name: "CSS" },
-    { icon: <SiHtml5 />, name: "HTML" },
+    { icon: <SiReact />, name: "ReactJS" },
+    { icon: <SiRedux />, name: "Redux" },
+    { icon: <FaNodeJs />, name: "NodeJS" },
+    { icon: <SiExpress />, name: "ExpressJS" },
+    { icon: <SiNextdotjs />, name: "Next.js" },
     { icon: <SiMysql />, name: "MySQL" },
     { icon: <SiPostgresql />, name: "PostgreSQL" },
-    { icon: <SiGithub />, name: "GitHub" },
-    { icon: <SiPrisma />, name: "Prisma" },
-    { icon: <SiRedux />, name: "Redux" },
-    { icon: <SiExpress />, name: "ExpressJS" },
-    { icon: <SiFigma />, name: "Figma" },
-    { icon: <SiTailwindcss />, name: "TailwindCSS" },
-    { icon: <SiJenkins />, name: "JUnit" },
     { icon: <SiFirebase />, name: "Firebase" },
-    { icon: <FaJava />, name: "Java" },
-    { icon: <FaCloud />, name: "Azure" },
+    { icon: <SiPrisma />, name: "Prisma" },
+    { icon: <SiDocker />, name: "Docker" },
     { icon: <FaAws />, name: "AWS" },
+    { icon: <FaCloud />, name: "Azure" },
+    { icon: <SiGithub />, name: "GitHub" },
+    { icon: <SiFigma />, name: "Figma" },
     // Add more skills here
   ],
 };
@@ -236,17 +235,21 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
                   {about.description}
                 </p>
+
                 <ul className="grid grid-cols-1 xl:grid-cols-1 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4 w-full h-[45px] bg-[#232329] roundex-xl"
+                        className="flex items-center justify-center rounded-xl xl:justify-start gap-4 w-full h-[45px] bg-[#232329] roundex-xl"
                       >
-                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-white/60 pl-[20px]">
+                          {item.fieldName}
+                        </span>
                         <span>{item.fieldValue}</span>
                       </li>
                     );
