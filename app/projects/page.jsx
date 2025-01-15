@@ -153,7 +153,7 @@ const Projects = () => {
                     <div className="h-[460px] relative group flex justify-center items-center bg-gray-800/20 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-[1.02] hover:shadow-xl">
                       {/* overlay */}
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10 transition-opacity duration-300 opacity-0 group-hover:opacity-100"></div>
-                      {/* project image */}
+                      {/* project image */}-
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}

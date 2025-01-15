@@ -19,6 +19,7 @@ import {
   SiTailwindcss,
   SiFirebase,
   SiNextdotjs,
+  SiPython,
 } from "react-icons/si";
 import { FaNodeJs, FaJava, FaAws, FaCloud } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -105,6 +106,7 @@ const skills = {
   description: "",
   skillList: [
     { icon: <FaJava />, name: "Java" },
+    { icon: <SiPython />, name: "Python" },
     { icon: <SiHtml5 />, name: "HTML" },
     { icon: <SiCss3 />, name: "CSS" },
     { icon: <SiTailwindcss />, name: "TailwindCSS" },
