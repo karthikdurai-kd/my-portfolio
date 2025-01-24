@@ -21,6 +21,23 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
+    category: "Note Vault App",
+    title: "Backend Application",
+    description:
+      "Note Vault App provides secure, scalable APIs built using Node.js and Express. It enables users to create, manage, share, and search notes. Key features include user authentication, rate limiting, request throttling, and seamless integration with MongoDB for persistent data storage.",
+    stack: [
+      { name: "NodeJS" },
+      { name: "ExpressJS" },
+      { name: "JWT" },
+      { name: "MongoDB" },
+      { name: "Jest" },
+      { name: "Supertest" },
+    ],
+    image: "/assets/work/thumb4.png",
+    github: "https://github.com/karthikdurai-kd/Note-Vault-App",
+  },
+  {
+    num: "02",
     category: "Work Management App",
     title: "Full Stack Web Application",
     description:
@@ -38,7 +55,7 @@ const projects = [
     github: "https://github.com/karthikdurai-kd/Work-Management-Application",
   },
   {
-    num: "02",
+    num: "03",
     category: "Vote Stream App",
     title: "Real Time Voting Application",
     description:
@@ -55,7 +72,7 @@ const projects = [
     github: "https://github.com/karthikdurai-kd/Vote-Stream-App",
   },
   {
-    num: "03",
+    num: "04",
     category: "Travel Tales App",
     title: "Serverless Cloud Application",
     description:
