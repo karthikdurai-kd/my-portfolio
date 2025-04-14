@@ -69,6 +69,11 @@ const experience = {
   description: "",
   items: [
     {
+      company: "Optionality",
+      position: "Full Stack Developer",
+      duration: "February 2025 - Present",
+    },
+    {
       company: "Pointers",
       position: "Full Stack Developer",
       duration: "January 2021 - September 2022",
