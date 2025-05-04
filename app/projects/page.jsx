@@ -21,6 +21,24 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
+    category: "HealthVault",
+    title: "Personal Healthcare Management System",
+    description:
+      "A comprehensive healthcare application that allows users to track medical records, manage doctor appointments, monitor health metrics, and get AI-powered health assistance using OpenAI.",
+    stack: [
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "TailwindCSS" },
+      { name: "Shadcn" },
+      { name: "D3.js" },
+      { name: "Supabase" },
+      { name: "OpenAI API" },
+    ],
+    image: "/assets/work/thumb5.png",
+    github: "https://github.com/karthikdurai-kd/HealthVault.git",
+  },
+  {
+    num: "02",
     category: "Note Vault App",
     title: "Backend Application",
     description:
@@ -37,7 +55,7 @@ const projects = [
     github: "https://github.com/karthikdurai-kd/Note-Vault-App",
   },
   {
-    num: "02",
+    num: "03",
     category: "Work Management App",
     title: "Full Stack Web Application",
     description:
@@ -55,7 +73,7 @@ const projects = [
     github: "https://github.com/karthikdurai-kd/Work-Management-Application",
   },
   {
-    num: "03",
+    num: "04",
     category: "Vote Stream App",
     title: "Real Time Voting Application",
     description:
@@ -72,7 +90,7 @@ const projects = [
     github: "https://github.com/karthikdurai-kd/Vote-Stream-App",
   },
   {
-    num: "04",
+    num: "05",
     category: "Travel Tales App",
     title: "Serverless Cloud Application",
     description:
@@ -153,6 +171,21 @@ const Projects = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
+                {/* live demo button - only show if available */}
+                {project.liveDemo && (
+                  <Link href={project.liveDemo}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live Demo</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
